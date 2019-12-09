@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema attributeFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified">
+    <element name="tourist-voucher" type="tns:tourist-voucher" abstract="true"/>
+    <element name="event-tourist-voucher" type="tns:event-tourist-voucher" substitutionGroup="tns:tourist-voucher"/>
+    <element name="sport-event-tourist-voucher" type="tns:sport-event-tourist-voucher" substitutionGroup="tns:event-tourist-voucher"/>
+    <element name="fan-sport-event-tourist-voucher" type="tns:fan-sport-event-tourist-voucher" substitutionGroup="tns:sport-event-tourist-voucher"/>
+    <element name="participant-sport-event-tourist-voucher" type="tns:participant-sport-event-tourist-voucher" substitutionGroup="tns:sport-event-tourist-voucher"/>
+    <element name="tourist-vouchers">
+        <complexType>
+            <sequence>
+                <element ref="tns:tourist-voucher" minOccurs="6" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="tourist-voucher">
+        <sequence>
+            <element name="country" type="string"/>
+            <element name="price" type="string"/>
+            <element name="transport">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="TRAIN"/>
+                        <enumeration value="PLANE"/>
+                        <enumeration value="SHIP"/>
+                        <enumeration value="CAR"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="hotel" type="tns:hotel"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="event-tourist-voucher">
+        <complexContent>
+            <extension base="tns:tourist-voucher">
+                <sequence>
+                    <element name="days-of-event" type="string"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="sport-event-tourist-voucher">
+        <complexContent>
+            <extension base="tns:event-tourist-voucher">
+                    <attribute name="name-of-sport-event" type="string" use="required"/>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="fan-sport-event-tourist-voucher">
+        <complexContent>
+            <extension base="tns:sport-event-tourist-voucher">
+                <sequence>
+                    <element name="place-on-tribune" type="string"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="participant-sport-event-tourist-voucher">
+        <complexContent>
+            <extension base="tns:sport-event-tourist-voucher">
+                <sequence>
+                    <element name="type-of-sport" type="string"/>
+                    <element name="team" type="string"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="hotel">
+        <sequence>
+            <element name="number-of-stars" type="positiveInteger"/>
+            <element name="capacity" type="positiveInteger"/>
+            <element name="nutrition"  default="NONE">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="NONE"/>
+                        <enumeration value="HB"/>
+                        <enumeration value="BB"/>
+                        <enumeration value="AL"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="conditioner" type="boolean"/>
+            <element name="tv" type="boolean"/>
+        </sequence>
+    </complexType>
+</schema>

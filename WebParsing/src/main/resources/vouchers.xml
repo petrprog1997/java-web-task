@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tourist-vouchers xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+                  xmlns:ns2="http://www.example.com/tourist-vouchers"
+                  xsi:schemaLocation = "vouchers.xsd">
+    <ns2:event-tourist-voucher>
+        <country>Belarus</country>
+        <price>2500</price>
+        <transport>PLANE</transport>
+        <hotel>
+            <number-of-stars>4</number-of-stars>
+            <capacity>2</capacity>
+            <nutrition>HB</nutrition>
+            <conditioner>true</conditioner>
+            <tv>true</tv>
+        </hotel>
+        <days-of-event>20.06.2019-28.07.2019</days-of-event>
+    </ns2:event-tourist-voucher>
+    <ns2:event-tourist-voucher>
+        <country>Great Britain</country>
+        <price>7000</price>
+        <transport>SHIP</transport>
+        <hotel>
+            <number-of-stars>5</number-of-stars>
+            <capacity>1</capacity>
+            <nutrition>AL</nutrition>
+            <conditioner>true</conditioner>
+            <tv>false</tv>
+        </hotel>
+        <days-of-event>14.01.2018-03.02.2018</days-of-event>
+    </ns2:event-tourist-voucher>
+    <ns2:event-tourist-voucher name-of-sport-event="European Games">
+        <country>Belarus</country>
+        <price>2500</price>
+        <transport>PLANE</transport>
+        <hotel>
+            <number-of-stars>4</number-of-stars>
+            <capacity>2</capacity>
+            <nutrition>HB</nutrition>
+            <conditioner>true</conditioner>
+            <tv>true</tv>
+        </hotel>
+        <days-of-event>20.06.2019-28.07.2019</days-of-event>
+    </ns2:event-tourist-voucher>
+    <ns2:sport-event-tourist-voucher name-of-sport-event="Wimbledon">
+        <country>Great Britain</country>
+        <price>7000</price>
+        <transport>SHIP</transport>
+        <hotel>
+            <number-of-stars>5</number-of-stars>
+            <capacity>1</capacity>
+            <nutrition>AL</nutrition>
+            <conditioner>true</conditioner>
+            <tv>false</tv>
+        </hotel>
+        <days-of-event>12.07.2018-19.07.2018</days-of-event>
+    </ns2:sport-event-tourist-voucher>
+    <ns2:fan-sport-event-tourist-voucher name-of-sport-event="Olympiad">
+        <country>Brasilia</country>
+        <price>3500</price>
+        <transport>PLANE</transport>
+        <hotel>
+            <number-of-stars>5</number-of-stars>
+            <capacity>3</capacity>
+            <nutrition>AL</nutrition>
+            <conditioner>true</conditioner>
+            <tv>false</tv>
+        </hotel>
+        <days-of-event>12.07.2019-20.07.2019</days-of-event>
+        <place-on-tribune>sector 1 row 12 place 18</place-on-tribune>
+    </ns2:fan-sport-event-tourist-voucher>
+    <ns2:fan-sport-event-tourist-voucher name-of-sport-event="Ice Hokey World Championship">
+        <country>USA</country>
+        <price>12000</price>
+        <transport>PLANE</transport>
+        <hotel>
+            <number-of-stars>4</number-of-stars>
+            <capacity>2</capacity>
+            <nutrition>HB</nutrition>
+            <conditioner>false</conditioner>
+            <tv>true</tv>
+        </hotel>
+        <days-of-event>25.09.2020-10.10.2020</days-of-event>
+        <place-on-tribune>sector 3 row 4 place 5</place-on-tribune>
+    </ns2:fan-sport-event-tourist-voucher>
+    <ns2:participant-sport-event-tourist-voucher name-of-sport-event="Soccer-World-Cup">
+        <country>Denmark</country>
+        <price>2400</price>
+        <transport>CAR</transport>
+        <hotel>
+            <number-of-stars>5</number-of-stars>
+            <capacity>2</capacity>
+            <nutrition>HB</nutrition>
+            <conditioner>false</conditioner>
+            <tv>true</tv>
+        </hotel>
+        <days-of-event>1.12.2019-19.12.2019</days-of-event>
+        <type-of-sport>soccer</type-of-sport>
+        <team>ManchesterUnited</team>
+    </ns2:participant-sport-event-tourist-voucher>
+    <ns2:participant-sport-event-tourist-voucher name-of-sport-event="Olympiad">
+        <country>Germany</country>
+        <price>1400</price>
+        <transport>TRAIN</transport>
+        <hotel>
+            <number-of-stars>4</number-of-stars>
+            <capacity>4</capacity>
+            <nutrition>BB</nutrition>
+            <conditioner>true</conditioner>
+            <tv>true</tv>
+        </hotel>
+        <days-of-event>04.03.2019-20.03.2019</days-of-event>
+        <type-of-sport>sprint</type-of-sport>
+        <team>Russia</team>
+    </ns2:participant-sport-event-tourist-voucher>
+</tourist-vouchers>
